@@ -17,6 +17,7 @@ angular.module('shortly.services', [])
   }
   return mData;
 })
+
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
   // it is responsible for authenticating our user
