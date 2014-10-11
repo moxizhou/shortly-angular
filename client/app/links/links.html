@@ -5,9 +5,19 @@
       <li><a href="#/shorten" class="create"> Shorten </a></li>
     <ul>
   </div>
-  <div ng-controller="LinksController as links">
-  <div ng-repeat="linkList in links.data">
-    {{linkList}}
+  <div ng-controller="LinksController">
+  <div class="info" ng-repeat="linkList in data.links">
+    <div class="title">
+    <!-- {{linkList}} -->
+      Title: {{linkList.title}}
+    </div>
+    <div class = "visits">
+      Visits: {{linkList.visits}}
+    </div>
+    <div class="">
+      <!-- Original:  {{linkList.url}} -->
+    </div>
+    <a href>{{linkList.url}}</a>
   </div>
   </div>
 

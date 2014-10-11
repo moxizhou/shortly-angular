@@ -5,8 +5,8 @@
       <li><a href="#/shorten" class="create"> Shorten </a></li>
     <ul>
   </div>
-  <div ng-controller="ShortenController as shorten"></div>
-  <form novalidate name="submitForm" ng-submit="shorten.addLink()">
+  <div ng-controller="ShortenController"></div>
+  <form novalidate name="submitForm" ng-click="addLink()">
     <input type="url" ng-model="link.url" required></input>
     <button ng-disabled="submitForm.$invalid">Shorten Me!</button>
   </form>
