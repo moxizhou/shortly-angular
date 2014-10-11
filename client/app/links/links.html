@@ -6,19 +6,27 @@
     <ul>
   </div>
   <div ng-controller="LinksController">
-  <div class="info" ng-repeat="linkList in data.links">
-    <div class="title">
-    <!-- {{linkList}} -->
-      Title: {{linkList.title}}
+    <div class="message">
+      <div class="info" ng-repeat="linkList in data.links">
+        <div class="link" style="display: block;">
+          <div class="title">
+            {{linkList.title}}
+          </div>
+          <div class = "visits">
+            <span class="count">
+              {{linkList.visits}} Visits
+            </span>
+          </div>
+          <div class="">
+            {{linkList.url}}
+          </div>
+          <a href="{{linkList.base_url}}+{{linkList.code}}">
+          <!-- what to set this equal to??? -->
+            {{linkList.base_url}}/{{linkList.code}}
+          </a>
+        </div>
+      </div>
     </div>
-    <div class = "visits">
-      Visits: {{linkList.visits}}
-    </div>
-    <div class="">
-      <!-- Original:  {{linkList.url}} -->
-    </div>
-    <a href>{{linkList.url}}</a>
-  </div>
   </div>
 
 </div>
