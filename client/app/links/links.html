@@ -3,11 +3,12 @@
     <ul>
       <li><a href="#/links" class="index"> All Links </a></li>
       <li><a href="#/shorten" class="create"> Shorten </a></li>
-    <ul>
+    </ul>
   </div>
+  <input type="text" ng-model="search">
   <div ng-controller="LinksController">
     <div class="message">
-      <div class="info" ng-repeat="linkList in data.links">
+      <div class="info" ng-repeat="linkList in data.links | filter:search">
         <div class="link" style="display: block;">
           <div class="title">
             {{linkList.title}}
@@ -20,8 +21,7 @@
           <div class="">
             {{linkList.url}}
           </div>
-          <a href="{{linkList.base_url}}+{{linkList.code}}">
-          <!-- what to set this equal to??? -->
+          <a href="{{linkList.url}}">
             {{linkList.base_url}}/{{linkList.code}}
           </a>
         </div>
