@@ -1,6 +1,8 @@
 <div id='container'>
-<!-- Your code here -->
-
+  <div ng-controller="ShortenController as shorten"></div>
+  <input type="text" ng-model="userUrl"></input>
+  <input type="submit" ng-click="shorten.addLink(userUrl)"></input>
+  <div>{{userUrl}}</div>
 </div>
 
 
