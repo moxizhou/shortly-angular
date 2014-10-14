@@ -8,6 +8,7 @@
   <div ng-controller="ShortenController"></div>
   <form novalidate name="submitForm" ng-click="addLink()">
     <input type="url" ng-model="link.url" required></input>
+    {{submitForm}}
     <button ng-disabled="submitForm.$invalid">Shorten Me!</button>
   </form>
 </div>
